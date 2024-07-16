@@ -1,0 +1,266 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hat Display', sans-serif;
+    box-sizing: border-box;
+}
+
+#main{
+    width: 100%;
+    height: 100vh;
+    background-color: #131314;
+    display: flex;
+}
+
+.main-left{
+    width: 23%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 10px;
+    border-right: solid white;
+    border-right-width: .1px;
+    position: fixed;
+
+    /* Ensure it stays fixed */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    /* Add a z-index to ensure it is above the right section */
+    z-index: 1;
+
+}
+
+.main-left .left-upper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: green; */
+    margin: 10px 0;
+    padding: 5px 0;
+}
+
+.main-left .left-upper .name h1{
+    color: aliceblue;
+    font-size: 2.2em;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+}
+
+.main-left .left-middle{
+    margin-top: 4vw;
+    padding-bottom: 180px;
+    border-bottom: .5px solid white;
+}
+
+.main-left .left-middle .feature-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.main-left .left-middle .feature-list .item a{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px 10px;
+    border: 1px solid rgb(146, 160, 199);
+    border-radius: 10px;
+    text-decoration: none;
+    /* background-color: blue; */
+}
+
+.main-left .left-middle .feature-list .item a.active{
+    background-color: #7a7adb;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2), 5px 1px 20px rgba(255, 255, 255, 0.2);
+}
+
+.main-left .left-middle .feature-list .item img{
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.main-left .left-middle .feature-list .item h3{
+    font-size: 23px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    color: antiquewhite;
+}
+
+.main-left .left-lower{
+    margin-bottom: 5vw;
+    /* background-color: green; */
+}
+
+.main-left .left-lower .settings-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.main-left .left-lower .settings-list .setting-item a{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.main-left .left-lower .settings-list .setting-item a.active{
+    border: 1px solid rgb(146, 160, 199);
+    border-radius: 10px;
+}
+
+.main-left .left-lower .settings-list .setting-item img{
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.main-left .left-lower .settings-list .setting-item h3{
+    font-size: 18px;
+    font-family: 'Arvo', sans-serif;
+    font-weight: 300;
+    color: antiquewhite;
+}
+
+
+
+.main-right{
+    width: calc(100% - 23%);
+    padding: 10px 10px;
+    margin-left: 23%;
+    overflow-y: auto;
+    height: 100vh;
+    /* background-color: green; */
+}
+
+.main-right .news,
+.main-right .email-spam,
+.main-right .more-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+.main-right .news.active,
+.main-right .email-spam.active,
+.main-right .more-info.active {
+    display: flex;
+}
+
+.main-right .news .news-heading,
+.main-right .email-spam .email-spam-heading,
+.main-right .more-info .more-info-heading{
+    margin-top: 20px;
+}
+
+.main-right .news .news-heading h1{
+    font-size: 4em;
+    font-family: 'DM Serif Display', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    color: antiquewhite;
+}
+
+.main-right .email-spam .email-spam-heading h1{
+    font-size: 3.8em;
+    font-family: 'DM Serif Display', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    color: antiquewhite;
+}
+
+
+.main-right .email-spam .email-spam-content{
+    width: 90%;
+    margin-top: 80px;
+}
+
+.main-right .email-spam .email-spam-content .email-spam-content-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px 10px;
+}
+
+.main-right .email-spam .email-spam-content .email-spam-content-container h4{
+    font-size: 20px;
+    color: azure;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 300;
+}
+
+.email-spam-content-container textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    letter-spacing: .9px;
+    border: 1px solid antiquewhite;
+    border-radius: 10px;
+    background-color: #131314;
+    color: #fff;
+    resize: none;
+    margin-top: 20px;
+}
+
+.email-spam-content-container button{
+    width: 20%;
+    margin-top: 20px;
+    padding: 5px 5px;
+    border: 1px solid #7a7adb;
+    border-radius: 7px;
+    background-color: #131314;
+    color: antiquewhite;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.email-spam-content-container button.active{
+    background-color: #7a7adb;
+}
+
+.main-right .email-spam-content .email-spam-prediction{
+    margin-top: 30px;
+    padding: 5px 10px;
+}
+
+.main-right .email-spam-content .email-spam-prediction h2{
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    color: antiquewhite;
+}
+
+.main-right .email-note{
+    width: 90%;
+    margin-top: 70px;
+    color: #D3D3D3;
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+}
+
+.main-right .email-note h4{
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 200;
+}
+
+
+.main-right .more-info .more-info-heading h1{
+    font-size: 3em;
+    font-family: 'DM Serif Display', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    color: antiquewhite;
+}
+

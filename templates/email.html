@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More-AI | Email Spam Checker</title>
+    <link rel="stylesheet" href="static/css/emailStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=League+Gothic&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+    <div id="main">
+
+        <div class="main-left">
+
+            <div class="left-upper">
+                <div class="name">
+                    <h1>MORE AI</h1>
+                </div>
+            </div>
+
+            <div class="left-middle">
+                <div class="feature-list">
+                    <div class="item">
+                        <a href="email" id="email-spam-link" class="active">
+                            <img src="static/media/email.svg">
+                            <h3>Email Spam Checker</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="left-lower">
+                <div class="settings-list">
+                    <div class="setting-item">
+                        <a href="info" id="more-info-link">
+                            <img src="static/media/info.svg">
+                            <h3>More information</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="main-right">
+
+            <div class="email-spam active" id="email-spam-section">
+                <div class="email-spam-heading">
+                    <h1>Email Spam Checker ⚠️</h1>
+                </div>
+
+                <div class="email-spam-content">
+                    <form action="/email" method="POST">
+                        <div class="email-spam-content-container">
+                            <h4>Enter the message :</h4>
+                            <textarea name="message-content" id="email-msg" rows="10" cols="50" placeholder="Only enter the content of the email for better result . . ."></textarea>
+                            <button id="email-predict-btn" type="submit">Predict</button>
+                        </div>
+                    </form>
+
+                    <div class="email-spam-prediction">
+                        <h2 id="prediction-result">{{ prediction }}</h2>
+                    </div>
+                </div>
+
+                <div class="email-note">
+                    <h4>Note: In some cases the model may not provide proper accuracy. Please check your message properly.</h4>
+                </div>
+
+            </div>
+
+            <div class="more-info" id="more-info-section">
+                <div class="more-info-heading">
+                    <h1>About This Project</h1>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="static/script/scriptEmail.js"></script>
+
+</body>
+</html>
